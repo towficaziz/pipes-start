@@ -32,6 +32,7 @@ export class AppComponent {
       started: new Date(15, 1, 2017)
     }
   ];
+  filteredStatus ='';
   getStatusClasses(server: {instanceType: string, name: string, status: string, started: Date}) {
     return {
       'list-group-item-success': server.status === 'stable',
@@ -39,4 +40,12 @@ export class AppComponent {
       'list-group-item-danger': server.status === 'critical'
     };
   }
+  // onAddServer(){
+  //   this.servers.push({
+  //     instanceType: 'small',
+  //     name: 'New server',
+  //     status: 'stable',
+  //     started: new Date(15, 1, 2023)
+  //   });
+  // }
 }
